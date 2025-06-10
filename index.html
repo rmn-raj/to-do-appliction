@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-header">
+            <h1>To-Do List</h1>
+            <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search tasks...">
+        </div>
+
+        <div class="todo-input">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <div class="task-options">
+                <select id="priority-select">
+                    <option value="low">Low Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <input type="date" id="due-date" title="Due Date">
+            </div>
+            <button id="add-button">Add</button>
+        </div>
+
+        <div class="filter-container">
+            <div class="filter-group">
+                <label>Status:</label>
+                <select id="status-filter">
+                    <option value="all" selected>All</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Priority:</label>
+                <select id="priority-filter">
+                    <option value="all" selected>All</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Sort By:</label>
+                <select id="sort-by">
+                    <option value="added" selected>Date Added</option>
+                    <option value="due">Due Date</option>
+                    <option value="priority">Priority</option>
+                    <option value="alphabetical">Alphabetical</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="tasks-container">
+            <ul id="task-list"></ul>
+        </div>
+
+        <div class="app-footer">
+            <span id="tasks-stats"></span>
+            <button id="clear-completed">Clear Completed</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
